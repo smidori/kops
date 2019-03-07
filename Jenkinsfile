@@ -66,10 +66,12 @@ def createValuesFile() {
 def kubernetesCluster(Map args) {
   switch(args.action) {
     case 'preview':
+      sh 'echo $PWD'
       sh "bash kops.sh preview-cluster"
       sh "bash kops.sh delete-cluster"
       break
     case 'create':
+      sh 'echo $PWD'
       sh "bash kops.sh create-cluster"
       break
   }
