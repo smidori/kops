@@ -211,7 +211,7 @@ case $action in
         --utility-subnets ${UTILITY_SUBNET_IDS} \
         --output yaml \
         --dry-run
-      s3-bucket-delete
+      #s3-bucket-delete
     else
       info "Cluster ${KOPS_CLUSTER_NAME} already exists."
       exit 1
